@@ -135,3 +135,23 @@
 // }
 
 // console.log(fizzBuzz(5));
+
+
+// EXERCISE 4 - Demerit Points
+//Speed Limit = 70 
+//Every +5 from speed limit = +1 point
+// 12 points -> Suspended
+
+function checkSpeed(speed) {
+
+    const speedLimit = 70;
+    speed = Math.floor(speed);
+    let points = (speed - speedLimit) / 5;
+
+    return (points >= 12) ?
+        'Suspended' : 'Valid ' + (12 - points) + ' points remain';
+
+}
+
+
+console.log(checkSpeed(300));
