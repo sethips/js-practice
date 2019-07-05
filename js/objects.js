@@ -348,40 +348,40 @@ const circle = {
 
 // Exercise 6- Price Range Object
 
-const priceRanges = [{
-        label: '$',
-        tooltip: 'Inexpensive',
-        min: 0,
-        max: 10
-    },
-    {
-        label: '$',
-        tooltip: 'Moderate',
-        min: 11,
-        max: 20
-    },
-    {
-        label: '$',
-        tooltip: 'Expensive',
-        min: 21,
-        max: 30
-    }
-];
+// const priceRanges = [{
+//         label: '$',
+//         tooltip: 'Inexpensive',
+//         min: 0,
+//         max: 10
+//     },
+//     {
+//         label: '$',
+//         tooltip: 'Moderate',
+//         min: 11,
+//         max: 20
+//     },
+//     {
+//         label: '$',
+//         tooltip: 'Expensive',
+//         min: 21,
+//         max: 30
+//     }
+// ];
 
-let restaurants = [{
-    average: 5
-}];
+// let restaurants = [{
+//     average: 5
+// }];
 
-console.log(restaurants[0].average);
+// console.log(restaurants[0].average);
 
-function calcPriceRange(priceRanges, restaurants) {
-    for (let priceRange of priceRanges) {
-        restaurants.forEach(function (restaurant) {
-            if (restaurant.average <= priceRange.max &&
-                restaurant.average > priceRange.min)
-                return console.log(priceRange.label, priceRange.tooltip);
-        });
-    }
-}
+// function calcPriceRange(priceRanges, restaurants) {
+//     for (let priceRange of priceRanges) {
+//         restaurants.forEach(function (restaurant) {
+//             if (restaurant.average <= priceRange.max &&
+//                 restaurant.average > priceRange.min)
+//                 return console.log(priceRange.label, priceRange.tooltip);
+//         });
+//     }
+// }
 
-calcPriceRange(priceRanges, restaurants);
+// calcPriceRange(priceRanges, restaurants);

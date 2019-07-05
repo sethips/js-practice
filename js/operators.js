@@ -1,6 +1,6 @@
 // ARITHMETIC OPERATORS
-let x = 10;
-let y = 3;
+// let x = 10;
+// let y = 3;
 
 // // console.log(x + y); //Add
 // // console.log(x - y); //Subtract
@@ -138,13 +138,13 @@ let y = 3;
 
 // EXERCISE - Swapping Variables
 
-let a = 'red';
-let b = 'blue';
+// let a = 'red';
+// let b = 'blue';
 
-let array = [a, b];
+// let array = [a, b];
 
-a = array[1];
-b = array[0];
+// a = array[1];
+// b = array[0];
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
