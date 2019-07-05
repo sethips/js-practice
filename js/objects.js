@@ -181,3 +181,207 @@ const circle = {
 
 // GARBAGE COLLECTION
 // Auto delicate (object) memory
+
+
+// -- BUILT IN OBJECTS ---
+// MATH OBJECT
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+// console.log(Math.round(Math.random() * 10));
+// console.log(Math.max(1, 2, 3)); // returns largest integer
+
+// STRING
+//String primitive & Escape Notations
+// const msg = ' hello\n buckoroo ';
+// console.log(typeof msg, msg.length);
+// console.log(msg[0], msg[1]);
+// console.log('e:', msg.includes('e'), 'E:', msg.includes('E'));
+// console.log('Ends with "o":', msg.endsWith('o'));
+// console.log('index sentence starts at', msg.indexOf('buckoroo'));
+// console.log(msg.replace('hello', 'what\'s going on'));
+// console.log(msg.toUpperCase());
+// console.log(msg.trim()); // removes 1st & last space of String
+// console.log(msg.split(' '));
+
+
+//String object
+// const another = new String('hi');
+// console.log(typeof another);
+
+// TEMPLATE LITERALS => tl
+// const name = 'John';
+// const msg = 'It\'s a String literal\n sentence ' + name + ' :)';
+
+// console.log(msg);
+
+// const tlMsg =
+//     `Tt's a Template literal
+//     sentence ${name} :)`;
+
+// console.log(tlMsg);
+
+// DATE
+// const now = new Date();
+// const date1 = new Date('July 5 2019 09:00');
+// const date2 = new Date(2019, 06, 06); // 2019/ 07 / 05
+
+// now.setFullYear(2017);
+
+// console.log(now);
+// console.log(now.toDateString());
+// console.log(now.toISOString());
+// console.log(date1);
+// console.log(date2);
+
+
+// Exercise 1- Address Object
+//Street, city, zipCode
+//showAddress(address)
+
+// const address = {
+//     street: 'Main Street',
+//     city: 'Manchester',
+//     zipCode: 'X21 4BJP'
+// };
+
+// function showAddress(address) {
+//     for (let key in address)
+//         console.log(address[key]);
+// }
+
+// showAddress(address);
+
+
+// Exercise 2- Factory and Constructor Functions
+// const address = {
+//     street: 'Main Street',
+//     city: 'Manchester',
+//     zipCode: 'X21 4BJP'
+// };
+// // Factory
+// function createAddress(street, city, zipCode) {
+//     return {
+//         street: street,
+//         city: city,
+//         zipCode: zipCode
+//     }
+// }
+
+// const createdAddress = createAddress('a', 'b', '1');
+
+// for (let key in createdAddress)
+//     console.log(createdAddress[key]);
+
+// // Constructor
+// function CreateAddress(street, city, zipCode) {
+//     this.street = street;
+//     this.city = city;
+//     this.zipCode = zipCode;
+// }
+
+// const createdAddress2 = new CreateAddress('x', 'y', '0');
+
+// for (let key in createdAddress2)
+//     console.log(createdAddress2[key]);
+
+
+// Exercise 3- Object Equality
+
+// function CreateAddress(street, city, zipCode) {
+//     this.street = street;
+//     this.city = city;
+//     this.zipCode = zipCode;
+// }
+
+// const address1 = new CreateAddress('x', 'y', '0');
+// const address2 = new CreateAddress('x', 'y', '0');
+// const address3 = address1;
+
+
+// function areEqual(address1, address2) {
+//     return address1.street === address2.street &&
+//         address1.city === address2.city &&
+//         address1.zipCode === address2.zipCode
+// }
+
+// console.log(areEqual(address1, address2));
+
+// function areSame(address1, address2) {
+//     return address1 === address2;
+// }
+
+// console.log(areSame(address1, address2));
+
+
+// Exercise 4- Blog Post Object
+//title , body, author, views, comments (author, body), isLive
+
+// const report = {
+//     title: 'a',
+//     body: 'b',
+//     author: 'c',
+//     views: 5,
+//     comments: [{
+//         author: 'a',
+//         body: 'b'
+//     }],
+//     isLive: true
+// }
+
+
+// Exercise 5- Constructor Functions
+
+
+// function Draft(title, body, author) {
+//     this.title = title;
+//     this.body = body;
+//     this.author = author;
+//     this.views = 0;
+//     this.comments = [];
+//     this.isLive = false;
+// }
+
+// const draft = new Draft('a', 'b', 'c');
+
+// console.log(draft);
+
+
+// Exercise 6- Price Range Object
+
+const priceRanges = [{
+        label: '$',
+        tooltip: 'Inexpensive',
+        min: 0,
+        max: 10
+    },
+    {
+        label: '$',
+        tooltip: 'Moderate',
+        min: 11,
+        max: 20
+    },
+    {
+        label: '$',
+        tooltip: 'Expensive',
+        min: 21,
+        max: 30
+    }
+];
+
+let restaurants = [{
+    average: 5
+}];
+
+console.log(restaurants[0].average);
+
+function calcPriceRange(priceRanges, restaurants) {
+    for (let priceRange of priceRanges) {
+        restaurants.forEach(function (restaurant) {
+            if (restaurant.average <= priceRange.max &&
+                restaurant.average > priceRange.min)
+                return console.log(priceRange.label, priceRange.tooltip);
+        });
+    }
+}
+
+calcPriceRange(priceRanges, restaurants);
